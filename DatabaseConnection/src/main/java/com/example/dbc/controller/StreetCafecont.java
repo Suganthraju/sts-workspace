@@ -1,7 +1,8 @@
 package com.example.dbc.controller;
 
-import java.util.Optional;
 
+import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,19 +20,26 @@ public class StreetCafecont {
 	@Autowired
 	public StreetCafeserv cserv;
 	
-	
 	//posting the details
 	@PostMapping("/project")
 	public StreetCafe addDetails(@RequestBody StreetCafe hii)
 	{
 		return cserv.saveInfo(hii);
 	}
+	
 	//Deleting the details
 	@DeleteMapping("/project/{hii}")
 	public String deletedetails(@PathVariable("hii")int hii)
 	{
 		cserv.deletedetails(hii);
 		return "Deletion was successful";
+	}
+	
+	//getting all details
+	@GetMapping("/getall")
+	public List<StreetCafe> getall()
+	{
+		return cserv.getall();
 	}
 	
 	//getting the details
@@ -48,9 +56,25 @@ public class StreetCafecont {
 		return cserv.updatedetails(hii);
 	}
 	
+	//sorting
+	@GetMapping("/sort/{name}")
+	public List<StreetCafe> sorting(@PathVariable("name")String name)
+	{
+		 return cserv.sorting(name);
+	}
 	
+	//pagination
+	@GetMapping("/page/{pnum}/{psize}")
+	public List<StreetCafe> page(@PathVariable("pnum")int num,@PathVariable("psize")int size)
+	{
+		return cserv.page(num,size);
+	}
 	
-	
-	
+	//pagination sorting
+	@GetMapping("/paginationsort/{pnum}/{psize}/{name}")
+	public List<StreetCafe> paginationsorting(@PathVariable("pnum")int pnum,@PathVariable("psize")int psize,@PathVariable("name")String name)
+	{
+		return cserv.paginationsorting(pnum,psize,name);
+	}
 	
 }

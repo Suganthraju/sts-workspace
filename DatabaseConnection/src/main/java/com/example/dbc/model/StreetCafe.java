@@ -9,64 +9,64 @@ import jakarta.persistence.Table;
 public class StreetCafe 
 {
 	   @Id
-	   private int a_type;
-	   private String b_name;
-	   private String c_addons;
-	   private String d_size;
-	   private int e_price;
-	   private int f_rating;
-	   private String g_servicemode;
-	   private String h_payment;
+	   private int type;
+	   private String name;
+	   private String addons;
+	   private String size;
+	   private int price;
+	   private int rating;
+	   private String servicemode;
+	   private String payment;
+	   
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddons() {
+		return addons;
+	}
+	public void setAddons(String addons) {
+		this.addons = addons;
+	}
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String size) {
+		this.size = size;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getRating() {
+		return rating;
+	}
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+	public String getServicemode() {
+		return servicemode;
+	}
+	public void setServicemode(String servicemode) {
+		this.servicemode = servicemode;
+	}
+	public String getPayment() {
+		return payment;
+	}
+	public void setPayment(String payment) {
+		this.payment = payment;
+	}
 	   
 	   
-	public int getA_type() {
-		return a_type;
-	}
-	public void setA_type(int a_type) {
-		this.a_type = a_type;
-	}
-	public String getB_name() {
-		return b_name;
-	}
-	public void setB_name(String b_name) {
-		this.b_name = b_name;
-	}
-	public String getC_addons() {
-		return c_addons;
-	}
-	public void setC_addons(String c_addons) {
-		this.c_addons = c_addons;
-	}
-	public String getD_size() {
-		return d_size;
-	}
-	public void setD_size(String d_size) {
-		this.d_size = d_size;
-	}
-	public int getE_price() {
-		return e_price;
-	}
-	public void setE_price(int e_price) {
-		this.e_price = e_price;
-	}
-	public int getF_rating() {
-		return f_rating;
-	}
-	public void setF_rating(int f_rating) {
-		this.f_rating = f_rating;
-	}
-	public String getG_servicemode() {
-		return g_servicemode;
-	}
-	public void setG_servicemode(String g_servicemode) {
-		this.g_servicemode = g_servicemode;
-	}
-	public String getH_payment() {
-		return h_payment;
-	}
-	public void setE_payment(String h_payment) {
-		this.h_payment = h_payment;
-	}
-	   
-	
+	  
 }
