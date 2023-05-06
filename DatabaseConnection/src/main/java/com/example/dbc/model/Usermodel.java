@@ -1,4 +1,4 @@
-package com.example.dbc.model;
+ package com.example.dbc.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -12,6 +12,10 @@ public class Usermodel {
 	private String mobileno;
 	private String password;
 	private int age;
+	private String dob;
+	private String gender;
+	private String captcha;
+	private String Language;
 	Usermodel(){}
 	public int getUserid() {
 		return userid;
@@ -49,6 +53,29 @@ public class Usermodel {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+	public String getDob() {
+		return dob;
+	}
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getCaptcha() {
+		return captcha;
+	}
+	public void setCaptcha(String captcha) {
+		this.captcha = captcha;
+	}
+	public String getLanguage() {
+		return Language;
+	}
+	public void setLanguage(String language) {
+		Language = language;
+	}
 
 }
