@@ -1,0 +1,12 @@
+#all{
+
+    background-image: url();
+    background-size: cover;
+    height: 88vh;
+}
+#hed{
+    margin-left: 1rem;
+    padding-top: 10%;
+    padding-left: 80%;
+    color: black;
+}
