@@ -39,4 +39,5 @@ public class UserController {
     	 LoginMessage loginMessage=us.loginUser(loginDTO);
     	 return ResponseEntity.ok(loginMessage);
      }
+
 }

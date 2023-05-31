@@ -1,7 +1,11 @@
 package com.example.dbc.model;
 
+import java.util.List;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -9,20 +13,20 @@ import jakarta.persistence.Table;
 public class StreetCafe 
 {
 	   @Id
-	   private int type;
+	   private int id;
 	   private String name;
-	   private String addons;
-	   private String size;
-	   private int price;
-	   private int rating;
-	   private String servicemode;
-	   private String payment;
+	   private String varient;
+	   private String pricerange;
 	   
-	public int getType() {
-		return type;
+	   @OneToMany(cascade = CascadeType.ALL)
+	   @JoinColumn
+	   private List<AdditionalDetails> details;
+	   
+	public int getId() {
+		return id;
 	}
-	public void setType(int type) {
-		this.type = type;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -30,43 +34,22 @@ public class StreetCafe
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAddons() {
-		return addons;
+	public String getVarient() {
+		return varient;
 	}
-	public void setAddons(String addons) {
-		this.addons = addons;
+	public void setVarient(String varient) {
+		this.varient = varient;
 	}
-	public String getSize() {
-		return size;
+	public String getPricerange() {
+		return pricerange;
 	}
-	public void setSize(String size) {
-		this.size = size;
+	public void setPricerange(String pricerange) {
+		this.pricerange = pricerange;
+	}   
+	public List<AdditionalDetails> getDetails() {
+		return details;
 	}
-	public int getPrice() {
-		return price;
+	public void setDetails(List<AdditionalDetails> details) {
+		this.details = details;
 	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	public int getRating() {
-		return rating;
-	}
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
-	public String getServicemode() {
-		return servicemode;
-	}
-	public void setServicemode(String servicemode) {
-		this.servicemode = servicemode;
-	}
-	public String getPayment() {
-		return payment;
-	}
-	public void setPayment(String payment) {
-		this.payment = payment;
-	}
-	   
-	   
-	  
 }

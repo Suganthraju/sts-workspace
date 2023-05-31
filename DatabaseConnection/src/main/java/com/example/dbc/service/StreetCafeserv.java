@@ -10,11 +10,14 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import com.example.dbc.model.StreetCafe;
+import com.example.dbc.repository.AdditionalRepo;
 import com.example.dbc.repository.StreetCaferepo;
 @Service
 public class StreetCafeserv {
 	@Autowired
 	public StreetCaferepo crepo;
+	@Autowired
+	public AdditionalRepo arepo;
 	
 	public StreetCafe saveInfo(StreetCafe hyy) {
 		return crepo.save(hyy);
