@@ -1,20 +1,15 @@
-package com.example.dbc.model;
+package com.example.dbc.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
-public class UserModel {
-	@Id
+public class UserDTO {
 	private int userid;
 	private String username;
 	private String email;
 	private String mobileno;
 	private String password;
 	private int age;
-	public UserModel(){}
+	public UserDTO() {}
 	
-	public UserModel(int userid, String username, String email, String mobileno, String password, int age) {
+	public UserDTO(int userid, String username, String email, String mobileno, String password, int age) {
 		super();
 		this.userid = userid;
 		this.username = username;
@@ -23,13 +18,14 @@ public class UserModel {
 		this.password = password;
 		this.age = age;
 	}
+	
 
-	public String getPassword() {
-		return password;
+	@Override
+	public String toString() {
+		return "UserDTO [userid=" + userid + ", username=" + username + ", email=" + email + ", mobileno=" + mobileno
+				+ ", password=" + password + ", age=" + age + "]";
 	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
+
 	public int getUserid() {
 		return userid;
 	}
@@ -54,6 +50,12 @@ public class UserModel {
 	public void setMobileno(String mobileno) {
 		this.mobileno = mobileno;
 	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public int getAge() {
 		return age;
 	}
@@ -61,5 +63,4 @@ public class UserModel {
 		this.age = age;
 	}
 	
-
 }

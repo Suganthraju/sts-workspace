@@ -16,7 +16,7 @@ import com.example.dbc.service.StreetCafeserv;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-public class StreetCafecont {
+public class StreetCafecont {	
 	@Autowired
 	public StreetCafeserv cserv;
 
