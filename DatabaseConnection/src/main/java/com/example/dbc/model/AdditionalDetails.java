@@ -1,15 +1,18 @@
 package com.example.dbc.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class AdditionalDetails {
 	
 	   @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	   private int id;
 	   private String addons;
-	   private int price;
+	   private int pric;
 	   private int quantity;
 	   private String size;
 	   private int rating;
@@ -28,12 +31,7 @@ public class AdditionalDetails {
 	public void setAddons(String addons) {
 		this.addons = addons;
 	}
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
+ 
 	public int getQuantity() {
 		return quantity;
 	}
@@ -64,7 +62,14 @@ public class AdditionalDetails {
 	public void setPayment(String payment) {
 		this.payment = payment;
 	}
+	public int getPric() {
+		return pric;
+	}
+	public void setPric(int pric) {
+		this.pric = pric;
+	}
 	   
 	   
 
 }
+

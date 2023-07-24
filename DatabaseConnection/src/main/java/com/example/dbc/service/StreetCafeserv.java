@@ -1,6 +1,5 @@
 package com.example.dbc.service;
 
-
 import java.util.List;
 import java.util.Optional;
 
@@ -9,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
+
 import com.example.dbc.model.StreetCafe;
 import com.example.dbc.repository.AdditionalRepo;
 import com.example.dbc.repository.StreetCaferepo;
@@ -32,6 +33,10 @@ public class StreetCafeserv {
 		// TODO Auto-generated method stub
 		return crepo.findAll();
 	}
+	public StreetCafe update(StreetCafe streetCafe) {
+		// TODO Auto-generated method stub
+		return crepo.save(streetCafe);
+	}
 
 	public Optional<StreetCafe> getdetails(int hii) {
 		// TODO Auto-generated method stub
@@ -52,6 +57,7 @@ public class StreetCafeserv {
 		Page<StreetCafe> p=crepo.findAll(PageRequest.of(num, size));
 		return p.getContent();
 	}
+	
 
 	public List<StreetCafe> paginationsorting(int pnum, int psize, String name) {
 		// TODO Auto-generated method stub
@@ -59,3 +65,4 @@ public class StreetCafeserv {
 		return p.getContent();
 	}
 }
+
